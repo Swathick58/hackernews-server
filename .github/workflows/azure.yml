@@ -14,7 +14,7 @@ env:
   ACR_REPOSITORY_NAME: hackernews
   CONTAINER_APP_NAME: hackernews
   TARGET_PORT: 3000
-  SUBSCRIPTION_ID: fe09b977-c903-47c9-94bc-51090cec65e9
+  SUBSCRIPTION_ID: 3d94d5aa-5f42-45a8-a63d-0d2c65a714bd
 
 jobs:
   build-and-deploy:
@@ -149,6 +149,4 @@ jobs:
             --image "${{ env.ACR_REGISTRY }}/${{ env.ACR_REPOSITORY_NAME }}:${{ github.ref_name }}" \
             --registry-server "${{ env.ACR_REGISTRY }}" \
             --registry-username "${{ env.ACR_USERNAME }}" \
-            --registry-password "${{ env.ACR_PASSWORD }}" \
-            --env-vars DATABASE_URL="${{ secrets.DATABASE_URL }}" \
-            
+            --registry-password "${{ env.ACR_PASSWORD }}"
