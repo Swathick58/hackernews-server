@@ -7,12 +7,12 @@ on:
 
 env:
   AZURE_REGION: centralindia
-  RESOURCE_GROUP: Holmium
-  CONTAINER_APPS_ENVIRONMENT: holmium-env
-  LOG_ANALYTICS_WORKSPACE: holmium-law
-  ACR_REGISTRY: holmium1si22cs411.azurecr.io
-  ACR_REPOSITORY_NAME: holmium
-  CONTAINER_APP_NAME: holmium
+  RESOURCE_GROUP: HackerNews
+  CONTAINER_APPS_ENVIRONMENT: HackerNewsContainerAppsEnvironment
+  LOG_ANALYTICS_WORKSPACE: HackerNewsLogAnalyticsWorkspace
+  ACR_REGISTRY: hackernews1si22cs411.azurecr.io
+  ACR_REPOSITORY_NAME: hackernews
+  CONTAINER_APP_NAME: hackernews
   TARGET_PORT: 3000
   SUBSCRIPTION_ID: fe09b977-c903-47c9-94bc-51090cec65e9
 
