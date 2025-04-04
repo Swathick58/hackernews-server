@@ -23,8 +23,11 @@ COPY package*.json ./
 # Step 5: Install dependencies
 RUN npm install --production
 
-# Step 6: Copy remaining source files
+# Step 6: Copy all remaining source files (including prisma/schema.prisma)
 COPY . .
+
+# 🔥 *New Step: Generate Prisma Client AFTER copying schema file*
+RUN npx prisma generate
 
 # Step 7: Expose port 3000
 EXPOSE 3000
