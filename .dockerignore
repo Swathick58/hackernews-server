@@ -1,4 +1,17 @@
+# Don't copy these into the Docker image
 node_modules
 npm-debug.log
-.dockerignore
-Dockerfile
+yarn.lock
+pnpm-lock.yaml
+.env
+.env.*
+.vscode
+.idea
+*.log
+*.tsbuildinfo
+__tests__
+coverage
+*.test.ts
+*.spec.ts
+.DS_Store
+Thumbs.db
