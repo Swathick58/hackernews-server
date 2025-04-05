@@ -4,6 +4,17 @@ import { allroutes } from "./routes/routes";
 import { serve } from "@hono/node-server";
 
 const port = 3000;
+allroutes.get("/generate", (context) => {
+  const randomNumber = Math.floor(Math.random() * 1000);
+
+  return context.json(
+    {
+      randomNumber,
+    },
+    200
+  );
+});
+
 
 console.log("📡 Binding server...");
 
