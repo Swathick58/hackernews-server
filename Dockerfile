@@ -1,19 +1,21 @@
-# Use Node base image
 FROM node:18
 
-# Create app directory
 WORKDIR /app
 
-# Install app dependencies
+# Copy only package.json and lock files first
 COPY package*.json ./
 
+# Install dependencies (this installs @prisma/client)
 RUN npm install
 
-# Copy app source code
+# Copy everything else
 COPY . .
 
-# Expose the app port
+# ✨ Generate the Prisma client
+RUN npx prisma generate
+
+# Expose your app's port
 EXPOSE 3000
 
-# Run the app
+# Start your app using tsx
 CMD ["npx", "tsx", "src/index.ts"]
