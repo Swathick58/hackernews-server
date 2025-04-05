@@ -13,8 +13,8 @@
     "dotenv": "^16.4.7",
     "hono": "^4.7.5",
     "jsonwebtoken": "^9.0.2",
-    "typescript":"^5.8.2",
-    "tsx": "^4.7.1"
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2"
   },
   "devDependencies": {
     "@types/node": "^20.11.17",
